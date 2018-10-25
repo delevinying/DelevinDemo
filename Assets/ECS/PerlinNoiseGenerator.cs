@@ -8,8 +8,8 @@ public class PerlinNoiseGenerator : MonoBehaviour
     public static int BlockFace = 0;
     public static Texture2D NoiseHeightMap;
 
-    public int texture2DWidth = 200;
-    public int texture2DHeight = 200;
+    int texture2DWidth = 200;
+    int texture2DHeight = 200;
 
     float scale1 = 1f;
     float scale2 = 10f;
@@ -21,11 +21,11 @@ public class PerlinNoiseGenerator : MonoBehaviour
     {
         offsetX = Random.Range(0, 99999);
         offsetY = Random.Range(0, 99999);
-        Minecraft.GameSettings,Heightmap = GenerateHeightMap();
-        Minecraft.SpawnNumberBlocks.Heightmap = GenerateHeightMap();
+        GameSettings.HeightMap = GenerateHeightMap();
+        SpawnNumberBlock.HeightMap = GenerateHeightMap();
     }
 
-    Texture2D GenerateHeightMap()
+    public Texture2D GenerateHeightMap()
     {
         Texture2D heightMap = new Texture2D(texture2DWidth, texture2DHeight);
         for (int x = 0; x < texture2DWidth; x++)

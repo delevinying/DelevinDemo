@@ -40,6 +40,9 @@ public class GameSettings : MonoBehaviour
     // Use this for initialization
     public EntityManager manager;
     public Entity entities;
+
+
+
     void Awake()
     {
         if (GM != null && GM != this)
@@ -61,10 +64,12 @@ public class GameSettings : MonoBehaviour
         );
     }
 
-
+    // private PerlinNoiseGenerator perlin;
     void Start()
     {
         manager = World.Active.GetOrCreateManager<EntityManager>();
+        // perlin = new PerlinNoiseGenerator();
+        // HeightMap = perlin.GenerateHeightMap();
         ChunkGenerator(chunkBase);
     }
 
@@ -80,7 +85,7 @@ public class GameSettings : MonoBehaviour
             {
                 for (int zBlock = 0; zBlock < 10 * amount; zBlock++)
                 {
-                    hightlevel = (int)(Heightmap.GetPixel(xBlock, zBlock).r * 100) - yBlock;
+                    hightlevel = (int)(HeightMap.GetPixel(xBlock, zBlock).r * 100) - yBlock;
                     airChecker = false;
                     Vector3 posTemp = new Vector3(xBlock, yBlock, zBlock);
                     switch (hightlevel)
@@ -101,7 +106,7 @@ public class GameSettings : MonoBehaviour
                             }
                             else
                             {
-                                TreeGenerator(xBlock,yBlock, zBlock);
+                                TreeGenerator(xBlock, yBlock, zBlock);
                             }
                             airChecker = true;
                             break;
@@ -131,63 +136,134 @@ public class GameSettings : MonoBehaviour
                     }
                     if (!airChecker)
                     {
-						if(!maTemp){
-							maTemp = pinkMaterial;
-						}			
-						AddCollider(posTemp);
-                        Entity entity = manager.CreateEntity(BlockArchetype);
+                        if (!maTemp)
+                        {
+                            maTemp = pinkMaterial;
+                        }
+                        AddCollider(posTemp);
+                        Entity entities = manager.CreateEntity(BlockArchetype);
                         manager.SetComponentData(entities, new Position { Value = new int3(xBlock, yBlock, zBlock) });
-                        manager.AddComponentData(entities, BlockTag{ });
-       					manager.AddComponentData(entities, new MeshInstanceRenderer()
-						{
-            				Mesh = blockMesh,
-            				Material = maTemp
-        				});
-    				}
-				}
+                        manager.AddComponentData(entities, new BlockTag { });
+                        manager.AddSharedComponentData(entities, new MeshInstanceRenderer
+                        {
+                            mesh = blockMesh,
+                            material = maTemp
+                        });
+                    }
+                }
             }
         }
     }
-	void TreeGenerator(int x,int y,int z){
-		for(int i = y;i<y+7;i++){
-			if(i== y + 6){
-				maTemp = leavesMaterial;
-			}else{
-				maTemp = woodMaterial;
-			}
 
-			if(!maTemp)
-				maTemp = pinkMaterial;
-			Vector3 posTemp = new Vector3(x,i,z);
-			AddCollider(posTemp);
-			Entity entity = manager.CreateEntity(BlockArchetype);
-			manager.SetComponentData(entities, new Position { Value = new int3(xBlock, yBlock, zBlock) });
-			manager.AddComponentData(entities, BlockTag{ });
-			manager.AddComponentData(entities, new MeshInstanceRenderer
-			{
-				Mesh = blockMesh,
-				Material = maTemp
-			});
-		}
-	}
 
-	void AddCollider(Vector3 posTemp){
-		if(createCollider){
-			GM.GetComponent<ColliderPool>().AddCollider(posTemp);
-		}
-	}
+    void PlantGenerator(int x, int y, int z, int n)
+    {
+        if (n == 1)
+        {
+            maTemp = tallGrassMaterial;
+        }
+        else
+        {
+            maTemp = roseMaterial;
+        }
 
-	void CloundGenerator(int x ,int y,int z){
-		meshTemp = blockMesh;
-		maTemp = CloundMaterial;
-		if(!maTemp){
-			maTemp = pinkMaterial;
-		}
-	}
-	
-	// Update is called once per frame
-	void Update()
-{
+        if (!maTemp)
+        {
+            maTemp = pinkMaterial;
+        }
 
-}
+        Quaternion rotation = Quaternion.Euler(0, 45, 0);
+        Entity entities = manager.CreateEntity(BlockArchetype);
+        manager.SetComponentData(entities, new Position { Value = new int3(x, y, z) });
+        manager.AddComponentData(entities, new Rotation { Value = rotation });
+        manager.AddComponentData(entities, new SurfacePlantTag { });
+        manager.AddSharedComponentData(entities, new MeshInstanceRenderer
+        {//Shared
+            mesh = tallGrassMesh,
+            material = maTemp
+        });
+    }
+    void TreeGenerator(int x, int y, int z)
+    {
+        for (int i = y; i < y + 7; i++)
+        {
+            if (i == y + 6)
+            {
+                maTemp = leaveMaterial;//leavesMaterial;
+            }
+            else
+            {
+                maTemp = woodMaterial;
+            }
+
+            if (!maTemp)
+                maTemp = pinkMaterial;
+            Vector3 posTemp = new Vector3(x, i, z);
+            AddCollider(posTemp);
+            Entity entities = manager.CreateEntity(BlockArchetype);
+            manager.SetComponentData(entities, new Position { Value = new int3(x, y, z) });
+            manager.AddComponentData(entities, new BlockTag { });
+            manager.AddSharedComponentData(entities, new MeshInstanceRenderer
+            {
+                mesh = blockMesh,
+                material = maTemp
+            });
+            if(i >= y+3 && i<= y+6){
+                for(int j = x -1;j<=x+1;j++){
+                    for(int k = z-1;k<=z+1;k++){
+                        if(k!=z||j!=x){
+                            posTemp = new Vector3(j,i,k);
+                            AddCollider(posTemp);
+                            entities = manager.CreateEntity(BlockArchetype);
+                            manager.AddComponentData(entities,new BlockTag{});
+                            manager.AddSharedComponentData(entities,new MeshInstanceRenderer{
+                                mesh = blockMesh,
+                                material = leaveMaterial
+                            });
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    void AddCollider(Vector3 posTemp)
+    {
+        if (createCollider)
+        {
+            GM.GetComponent<ColliderPool>().AddCollider(posTemp);
+        }
+    }
+
+    void CloundGenerator(int x, int y, int z)
+    {
+        meshTemp = blockMesh;
+        maTemp = CloundMaterial;
+        if (!maTemp)
+        {
+            maTemp = pinkMaterial;
+        }
+        ranDice = UnityEngine.Random.Range(4, 7);
+        for (int i = 0; i < ranDice; i++)
+        {
+            for (int j = 0; j < ranDice; j++)
+            {
+                Entity entities = manager.CreateEntity(BlockArchetype);
+                manager.SetComponentData(entities, new Position{ Value = new int3(x + 1, y + 15 , z + j) });
+                manager.AddSharedComponentData(entities, new MeshInstanceRenderer
+                {
+                    mesh = meshTemp,
+                    material = maTemp
+                });
+            }
+        }
+
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class ColliderPool : MonoBehaviour {
 
 	public static ColliderPool CP;
-	public static GameObject boxCollider;
+	public  GameObject boxCollider;
 
 	void Awake(){
 		if(CP !=null && CP != this){

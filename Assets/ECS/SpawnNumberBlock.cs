@@ -6,8 +6,8 @@ using Unity.Transforms;
 using Unity.Mathematics;
 public class SpawnNumberBlock : MonoBehaviour
 {
-
-    public static Texture2D Heightmap;
+    
+    public static Texture2D HeightMap;
     public static EntityArchetype BlockArchetype;
 
     [Header("chunkBase * chunkBase")]
@@ -34,6 +34,7 @@ public class SpawnNumberBlock : MonoBehaviour
             typeof(Position)
         );
     }
+    
     // Use this for initialization
     void Start()
     {
@@ -52,7 +53,7 @@ public class SpawnNumberBlock : MonoBehaviour
             {
                 for (int zBlock = 0; zBlock < 10 * amount; zBlock++)
                 {
-                    hightlevel = (int)(Heightmap.GetPixel(xBlock, zBlock).r * 100) - yBlock;
+                    hightlevel = (int)(HeightMap.GetPixel(xBlock, zBlock).r * 100) - yBlock;
                     airChecker = false;
                     Vector3 posTemp = new Vector3(xBlock, yBlock, zBlock);
                     switch (hightlevel)
@@ -85,14 +86,15 @@ public class SpawnNumberBlock : MonoBehaviour
 							maTemp = no0;
 							airChecker = true;
 							break;
+
                     }
 					if(!airChecker){
 						Entity entity = manager.CreateEntity(BlockArchetype);
 						manager.SetComponentData(entities,new Position{Value = new int3(xBlock,yBlock,zBlock)});
-						manager.AddComponentData(entities,BlockTag{});
-						manager.AddComponentData(entities,new MeshInstanceRenderer{
-							Mesh = blockMesh,
-							Material = maTemp
+						manager.AddComponentData(entities,new BlockTag{});
+						manager.AddSharedComponentData(entities,new MeshInstanceRenderer{
+							mesh = blockMesh,
+							material = maTemp
 						});
 					}
                 }
@@ -100,7 +102,7 @@ public class SpawnNumberBlock : MonoBehaviour
         }
     }
 
-	
+	 
 
     // Update is called once per frame
     void Update()
