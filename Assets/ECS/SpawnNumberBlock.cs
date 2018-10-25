@@ -6,7 +6,7 @@ using Unity.Transforms;
 using Unity.Mathematics;
 public class SpawnNumberBlock : MonoBehaviour
 {
-    
+
     public static Texture2D HeightMap;
     public static EntityArchetype BlockArchetype;
 
@@ -24,7 +24,7 @@ public class SpawnNumberBlock : MonoBehaviour
     public Material no7;
     Material maTemp;
     public EntityManager manager;
-    public Entity entities;
+    //public Entity entities;
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     public static void Initialize()
@@ -34,7 +34,8 @@ public class SpawnNumberBlock : MonoBehaviour
             typeof(Position)
         );
     }
-    
+
+
     // Use this for initialization
     void Start()
     {
@@ -82,27 +83,29 @@ public class SpawnNumberBlock : MonoBehaviour
                         case 7:
                             maTemp = no7;
                             break;
-							default:
-							maTemp = no0;
-							airChecker = true;
-							break;
+                        default:
+                            maTemp = no0;
+                            airChecker = true;
+                            break;
 
                     }
-					if(!airChecker){
-						Entity entity = manager.CreateEntity(BlockArchetype);
-						manager.SetComponentData(entities,new Position{Value = new int3(xBlock,yBlock,zBlock)});
-						manager.AddComponentData(entities,new BlockTag{});
-						manager.AddSharedComponentData(entities,new MeshInstanceRenderer{
-							mesh = blockMesh,
-							material = maTemp
-						});
-					}
+                    if (!airChecker)
+                    {
+                        Entity entities = manager.CreateEntity(BlockArchetype);
+                        manager.SetComponentData(entities, new Position { Value = new int3(xBlock, yBlock, zBlock) });
+                        manager.AddComponentData(entities, new BlockTag { });
+                        manager.AddSharedComponentData(entities, new MeshInstanceRenderer
+                        {
+                            mesh = blockMesh,
+                            material = maTemp
+                        });
+                    }
                 }
             }
         }
     }
 
-	 
+
 
     // Update is called once per frame
     void Update()

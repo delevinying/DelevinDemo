@@ -325,9 +325,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1883633016}
-  - component: {fileID: 1883633017}
   - component: {fileID: 1883633015}
-  - component: {fileID: 1883633018}
+  - component: {fileID: 1883633017}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -367,38 +366,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1883633014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a34b43718f7d4d58b157527099e2bb2, type: 3}
+  m_Script: {fileID: 11500000, guid: c5b781699b8e44c6aa66d9ebc6b47223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chunkBase: 2
+  chunkBase: 10
   blockMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  surfaceMesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
-  tallGrassMesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
-  stoneMaterial: {fileID: 2100000, guid: d805d830c4023774cb6259aca09f431e, type: 2}
-  woodMaterial: {fileID: 2100000, guid: 893960384de673345a82517892b28bc7, type: 2}
-  leaveMaterial: {fileID: 2100000, guid: 020b997e4fa23c74297e208cd649319c, type: 2}
-  surfaceMaterial: {fileID: 2100000, guid: fedc75da63b32e249bccd7450cd29351, type: 2}
-  cobbleMaterial: {fileID: 2100000, guid: 2c6f5ab601d22834883d3c7e18f8be41, type: 2}
-  dirtMaterial: {fileID: 2100000, guid: 15654a743eccf384fb2312048db767f0, type: 2}
-  tallGrassMaterial: {fileID: 2100000, guid: d86005a29439b7541ade84523818db1a, type: 2}
-  roseMaterial: {fileID: 2100000, guid: 059cceb0ba6e50741bfe6ec2c755d5f4, type: 2}
-  CloundMaterial: {fileID: 2100000, guid: 49c3c02661a83fd42b33859cfbf9a17d, type: 2}
-  glassMaterial: {fileID: 2100000, guid: 9dccf2dcc78efe741b7931e3bb85beaf, type: 2}
-  brickMaterial: {fileID: 2100000, guid: 5558b5711d37782468eeee5c2880e7d8, type: 2}
-  plankMaterial: {fileID: 2100000, guid: 224de5a1c3ba5f948af30bd7826e4666, type: 2}
-  tntMaterial: {fileID: 2100000, guid: e7268e596932cb541834f57d320a4677, type: 2}
-  pinkMaterial: {fileID: 2100000, guid: bce0cd8cdfffc2a41b798316325a24d2, type: 2}
-  createCollider: 1
---- !u!114 &1883633018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1883633014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fb130e91983140ccaccfb4c41a87a9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boxCollider: {fileID: 1135098310748524, guid: dc4152d7217974410a2ff22398537612,
-    type: 2}
+  no0: {fileID: 2100000, guid: f58a86e0dbbfb46f2a4d0759616fe949, type: 2}
+  no1: {fileID: 2100000, guid: f58a86e0dbbfb46f2a4d0759616fe949, type: 2}
+  no2: {fileID: 2100000, guid: f58a86e0dbbfb46f2a4d0759616fe949, type: 2}
+  no3: {fileID: 2100000, guid: f58a86e0dbbfb46f2a4d0759616fe949, type: 2}
+  no4: {fileID: 2100000, guid: f58a86e0dbbfb46f2a4d0759616fe949, type: 2}
+  no5: {fileID: 2100000, guid: f58a86e0dbbfb46f2a4d0759616fe949, type: 2}
+  no6: {fileID: 2100000, guid: f58a86e0dbbfb46f2a4d0759616fe949, type: 2}
+  no7: {fileID: 2100000, guid: f58a86e0dbbfb46f2a4d0759616fe949, type: 2}

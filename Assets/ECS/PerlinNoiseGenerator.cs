@@ -25,7 +25,9 @@ public class PerlinNoiseGenerator : MonoBehaviour
         SpawnNumberBlock.HeightMap = GenerateHeightMap();
     }
 
-    public Texture2D GenerateHeightMap()
+    
+
+    Texture2D GenerateHeightMap()
     {
         Texture2D heightMap = new Texture2D(texture2DWidth, texture2DHeight);
         for (int x = 0; x < texture2DWidth; x++)
@@ -53,17 +55,6 @@ public class PerlinNoiseGenerator : MonoBehaviour
 		float sample2 = Mathf.PerlinNoise(xCoord2,yCoord2)/15;
 		float sample3 = Mathf.PerlinNoise(xCoord3,yCoord3)/15;
 		return new Color(sample1+sample2+sample3,sample1+sample2+sample3,sample1+sample2+sample3);
-
-    }
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
 
     }
 }
