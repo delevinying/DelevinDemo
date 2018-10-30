@@ -281,7 +281,7 @@ CharacterController:
   m_GameObject: {fileID: 1569166224}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Height: 2
   m_Radius: 0.5
@@ -296,7 +296,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1569166224}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0248dee70c6d74f579d43171eb39ad04, type: 3}
   m_Name: 
@@ -326,12 +326,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1883633016}
   - component: {fileID: 1883633015}
-  - component: {fileID: 1883633017}
   - component: {fileID: 1883633019}
   - component: {fileID: 1883633018}
   - component: {fileID: 1883633021}
-  - component: {fileID: 1883633020}
-  - component: {fileID: 1883633022}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -363,27 +360,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1883633017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1883633014}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5b781699b8e44c6aa66d9ebc6b47223, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chunkBase: 10
-  blockMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  no0: {fileID: 10756, guid: 0000000000000000e000000000000000, type: 0}
-  no1: {fileID: 2100000, guid: fedc75da63b32e249bccd7450cd29351, type: 2}
-  no2: {fileID: 2100000, guid: f58a86e0dbbfb46f2a4d0759616fe949, type: 2}
-  no3: {fileID: 2100000, guid: f58a86e0dbbfb46f2a4d0759616fe949, type: 2}
-  no4: {fileID: 2100000, guid: f58a86e0dbbfb46f2a4d0759616fe949, type: 2}
-  no5: {fileID: 2100000, guid: f58a86e0dbbfb46f2a4d0759616fe949, type: 2}
-  no6: {fileID: 2100000, guid: f58a86e0dbbfb46f2a4d0759616fe949, type: 2}
-  no7: {fileID: 2100000, guid: f58a86e0dbbfb46f2a4d0759616fe949, type: 2}
 --- !u!114 &1883633018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -412,38 +388,21 @@ MonoBehaviour:
   blockMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   surfaceMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   tallGrassMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  stoneMaterial: {fileID: 2100000, guid: 49c3c02661a83fd42b33859cfbf9a17d, type: 2}
-  woodMaterial: {fileID: 2100000, guid: 5558b5711d37782468eeee5c2880e7d8, type: 2}
-  leaveMaterial: {fileID: 2100000, guid: fedc75da63b32e249bccd7450cd29351, type: 2}
-  surfaceMaterial: {fileID: 2100000, guid: 15654a743eccf384fb2312048db767f0, type: 2}
-  cobbleMaterial: {fileID: 2100000, guid: 15654a743eccf384fb2312048db767f0, type: 2}
-  dirtMaterial: {fileID: 2100000, guid: 15654a743eccf384fb2312048db767f0, type: 2}
+  stoneMaterial: {fileID: 2100000, guid: 5674184a87d87e54ca8047426601a57b, type: 2}
+  woodMaterial: {fileID: 2100000, guid: 36508c771463abf43b7135d9539897e7, type: 2}
+  leaveMaterial: {fileID: 2100000, guid: 9dccf2dcc78efe741b7931e3bb85beaf, type: 2}
+  surfaceMaterial: {fileID: 2100000, guid: 5558b5711d37782468eeee5c2880e7d8, type: 2}
+  cobbleMaterial: {fileID: 2100000, guid: e7268e596932cb541834f57d320a4677, type: 2}
+  dirtMaterial: {fileID: 2100000, guid: 748487d582b00d847bd57517f78d8e8f, type: 2}
   tallGrassMaterial: {fileID: 2100000, guid: 5674184a87d87e54ca8047426601a57b, type: 2}
-  roseMaterial: {fileID: 2100000, guid: d86005a29439b7541ade84523818db1a, type: 2}
-  CloundMaterial: {fileID: 2100000, guid: fedc75da63b32e249bccd7450cd29351, type: 2}
-  glassMaterial: {fileID: 2100000, guid: 15654a743eccf384fb2312048db767f0, type: 2}
-  brickMaterial: {fileID: 2100000, guid: 42e26e838cb21e944aa7de2aae4edefc, type: 2}
+  roseMaterial: {fileID: 2100000, guid: 49c3c02661a83fd42b33859cfbf9a17d, type: 2}
+  CloundMaterial: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  glassMaterial: {fileID: 2100000, guid: f58a86e0dbbfb46f2a4d0759616fe949, type: 2}
+  brickMaterial: {fileID: 2100000, guid: 5558b5711d37782468eeee5c2880e7d8, type: 2}
   plankMaterial: {fileID: 2100000, guid: 893960384de673345a82517892b28bc7, type: 2}
-  tntMaterial: {fileID: 2100000, guid: 2c6f5ab601d22834883d3c7e18f8be41, type: 2}
+  tntMaterial: {fileID: 2100000, guid: d805d830c4023774cb6259aca09f431e, type: 2}
   pinkMaterial: {fileID: 2100000, guid: f58a86e0dbbfb46f2a4d0759616fe949, type: 2}
-  createCollider: 0
---- !u!114 &1883633020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1883633014}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b0fd4427893a4a16ba0c267dfd00217, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedData:
-    mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-    material: {fileID: 2100000, guid: f58a86e0dbbfb46f2a4d0759616fe949, type: 2}
-    subMesh: 0
-    castShadows: 0
-    receiveShadows: 0
+  createCollider: 1
 --- !u!114 &1883633021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -455,17 +414,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bf10cdea1344482e91a4f2b58506b77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1883633022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1883633014}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bd882fb49c2b497083140cdfa00e965, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blockMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  blockMaterial: {fileID: 2100000, guid: f58a86e0dbbfb46f2a4d0759616fe949, type: 2}
-  prefab_ref: {fileID: 1042905926483424, guid: e8c24759452d341aab575a9a81e0124c, type: 2}
