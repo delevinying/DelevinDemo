@@ -26,20 +26,21 @@ public class SpawnOneBlock : MonoBehaviour {
 	// Use this for initialization
 	//[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
 	void Start () {
-		// manager = World.Active.GetOrCreateManager<EntityManager>();
-		// Entity entities = manager.CreateEntity(BlockArchetype);
-		// manager.SetComponentData(entities,new Position{Value = new int3(2,0,0)});
-		// manager.AddComponentData(entities,new BlockTag{ });
-		// manager.AddSharedComponentData(entities,new MeshInstanceRenderer{
-		// 	mesh = blockMesh;
-		// 	material = blockMaterial;
-		// });
-		// if(prefab_ref){
-		// 	NativeArray<Entity> entityArray = new NativeArray<Entity>(1,Allocator.Temp);
-		// 	Manager.Instantiate(prefab_ref,entityArray);
-		// 	manager.SetComponentData(EntityArray[0],new Position{Value = new float3(4,0f,0f)});
-		// 	entityArray.Dispose();
-		// }
+		 manager = World.Active.GetOrCreateManager<EntityManager>();
+		 entities = manager.CreateEntity(BlockArchetype);
+		 manager.SetComponentData(entities,new Position{Value = new int3(2,0,0)});
+		 manager.AddComponentData(entities,new BlockTag{ });
+		 manager.AddSharedComponentData(entities,new MeshInstanceRenderer{
+		 	mesh = blockMesh,
+            material = blockMaterial
+		 });
+		 if(prefab_ref){
+		 	NativeArray<Entity> entityArray = new NativeArray<Entity>(1,Allocator.Temp);
+            manager.Instantiate(prefab_ref,entityArray);
+		 	manager.SetComponentData(entityArray[0],new Position{Value = new float3(4,0f,0f)});
+		 	entityArray.Dispose();
+		 }
+		 
 	}
 	
 	// Update is called once per frame

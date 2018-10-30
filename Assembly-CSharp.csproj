@@ -63,6 +63,7 @@
      <Compile Include="Assets\ECS\SpawnNumberBlock.cs" />
      <Compile Include="Assets\ECS\SpawnOneBlock.cs" />
      <Compile Include="Assets\Managers.cs" />
+     <Compile Include="Assets\PlanetSpawner.cs" />
      <Compile Include="Assets\SpData.cs" />
      <Compile Include="Assets\SpInstatiator.cs" />
  <Reference Include="Unity.Entities.Properties">

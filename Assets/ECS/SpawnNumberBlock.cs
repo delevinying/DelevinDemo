@@ -94,11 +94,11 @@ public class SpawnNumberBlock : MonoBehaviour
                         Entity entities = manager.CreateEntity(BlockArchetype);
                         manager.SetComponentData(entities, new Position { Value = new int3(xBlock, yBlock, zBlock) });
                         manager.AddComponentData(entities, new BlockTag { });
-                        manager.AddSharedComponentData(entities, new MeshInstanceRenderer
-                        {
-                            mesh = blockMesh,
-                            material = maTemp
-                        });
+                        // manager.AddSharedComponentData(entities, new MeshInstanceRenderer
+                        // {
+                        //     mesh = blockMesh,
+                        //     material = maTemp
+                        // });
                     }
                 }
             }

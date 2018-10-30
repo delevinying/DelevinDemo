@@ -4,6 +4,10 @@ using UnityEngine;
 using Unity.Entities;
 using Unity.Transforms;
 using Unity.Mathematics;
+
+
+using Unity.Rendering;
+
 public class GameSettings : MonoBehaviour
 {
 

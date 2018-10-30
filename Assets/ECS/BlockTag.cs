@@ -7,10 +7,10 @@ public struct BlockTag : IComponentData {
 	
 }
 
-public struct MeshInstanceRenderer:ISharedComponentData{
-    public Mesh mesh;
-    public Material material;
-}
+// public struct MeshInstanceRenderer:ISharedComponentData{
+//     public Mesh mesh;
+//     public Material material;
+// }
 
 public struct SurfacePlantTag:IComponentData{
 
