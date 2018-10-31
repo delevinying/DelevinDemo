@@ -250,11 +250,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 428986972}
   m_LocalRotation: {x: 0.21302179, y: -0, z: -0, w: 0.97704744}
-  m_LocalPosition: {x: 5, y: 3.3333335, z: 5}
-  m_LocalScale: {x: 1, y: 1.1910022, z: 1.1910028}
+  m_LocalPosition: {x: 40, y: 30, z: 12}
+  m_LocalScale: {x: 1, y: 3.1602619, z: 1.6037483}
   m_Children: []
-  m_Father: {fileID: 1569166227}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 24.599, y: 0, z: 0}
 --- !u!1 &1569166224
 GameObject:
@@ -272,7 +272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!143 &1569166225
 CharacterController:
   m_ObjectHideFlags: 0
@@ -296,7 +296,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1569166224}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0248dee70c6d74f579d43171eb39ad04, type: 3}
   m_Name: 
@@ -312,10 +312,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 3, z: 1}
-  m_Children:
-  - {fileID: 428986975}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1883633014
 GameObject:
@@ -384,24 +383,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a34b43718f7d4d58b157527099e2bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chunkBase: 2
+  chunkBase: 8
   blockMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   surfaceMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   tallGrassMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  stoneMaterial: {fileID: 2100000, guid: 5674184a87d87e54ca8047426601a57b, type: 2}
-  woodMaterial: {fileID: 2100000, guid: 36508c771463abf43b7135d9539897e7, type: 2}
-  leaveMaterial: {fileID: 2100000, guid: 9dccf2dcc78efe741b7931e3bb85beaf, type: 2}
-  surfaceMaterial: {fileID: 2100000, guid: 5558b5711d37782468eeee5c2880e7d8, type: 2}
-  cobbleMaterial: {fileID: 2100000, guid: e7268e596932cb541834f57d320a4677, type: 2}
-  dirtMaterial: {fileID: 2100000, guid: 748487d582b00d847bd57517f78d8e8f, type: 2}
-  tallGrassMaterial: {fileID: 2100000, guid: 5674184a87d87e54ca8047426601a57b, type: 2}
-  roseMaterial: {fileID: 2100000, guid: 49c3c02661a83fd42b33859cfbf9a17d, type: 2}
-  CloundMaterial: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
-  glassMaterial: {fileID: 2100000, guid: f58a86e0dbbfb46f2a4d0759616fe949, type: 2}
-  brickMaterial: {fileID: 2100000, guid: 5558b5711d37782468eeee5c2880e7d8, type: 2}
-  plankMaterial: {fileID: 2100000, guid: 893960384de673345a82517892b28bc7, type: 2}
-  tntMaterial: {fileID: 2100000, guid: d805d830c4023774cb6259aca09f431e, type: 2}
-  pinkMaterial: {fileID: 2100000, guid: f58a86e0dbbfb46f2a4d0759616fe949, type: 2}
+  stoneMaterial: {fileID: 2100000, guid: 052821051301bb849ab0e4f50ad32d10, type: 2}
+  woodMaterial: {fileID: 2100000, guid: 052821051301bb849ab0e4f50ad32d10, type: 2}
+  leaveMaterial: {fileID: 2100000, guid: 1af41386b6aebff43af8aff2e57927a8, type: 2}
+  surfaceMaterial: {fileID: 2100000, guid: 3c560b1c5b4a7c048ba5f9b87a27ffd7, type: 2}
+  cobbleMaterial: {fileID: 2100000, guid: 052821051301bb849ab0e4f50ad32d10, type: 2}
+  dirtMaterial: {fileID: 2100000, guid: 11729fa27a679db4fbeedeff9e7512fe, type: 2}
+  tallGrassMaterial: {fileID: 2100000, guid: 11729fa27a679db4fbeedeff9e7512fe, type: 2}
+  roseMaterial: {fileID: 2100000, guid: bd26e3d2d0f56b54d95b8f3b244d407f, type: 2}
+  CloundMaterial: {fileID: 2100000, guid: bd26e3d2d0f56b54d95b8f3b244d407f, type: 2}
+  glassMaterial: {fileID: 2100000, guid: 11729fa27a679db4fbeedeff9e7512fe, type: 2}
+  brickMaterial: {fileID: 2100000, guid: 11729fa27a679db4fbeedeff9e7512fe, type: 2}
+  plankMaterial: {fileID: 2100000, guid: 731960bee06a1174683f3e96b29f5afb, type: 2}
+  tntMaterial: {fileID: 2100000, guid: 3c560b1c5b4a7c048ba5f9b87a27ffd7, type: 2}
+  pinkMaterial: {fileID: 2100000, guid: 11729fa27a679db4fbeedeff9e7512fe, type: 2}
   createCollider: 1
 --- !u!114 &1883633021
 MonoBehaviour:
