@@ -1,7 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System;
 using Unity.Entities;
-public class Rotator : IComponentData {
+public struct Rotator : IComponentData {
 	public float speed;
 }
+
+public class RotationSpeedComponent : ComponentDataWrapper<Rotator> { }

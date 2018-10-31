@@ -29,6 +29,7 @@ public class Demo3 : MonoBehaviour {
 		for(int i=0;i<starNum;i++){
 			entities = entityManager.CreateEntity(entityArchetype);
 			entityManager.SetComponentData(entities,new Position{Value = new int3(i*3,0,0)});
+			entityManager.AddComponentData(entities,new Rotator{speed = i});
 			// entityManager.AddComponent(entities, r);
 			entityManager.AddSharedComponentData(entities,new MeshInstanceRenderer{
 				mesh = mesh,

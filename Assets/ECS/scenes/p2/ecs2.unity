@@ -385,8 +385,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chunkBase: 8
   blockMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  surfaceMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  tallGrassMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  surfaceMesh: {fileID: 0}
+  tallGrassMesh: {fileID: 0}
   stoneMaterial: {fileID: 2100000, guid: 052821051301bb849ab0e4f50ad32d10, type: 2}
   woodMaterial: {fileID: 2100000, guid: 052821051301bb849ab0e4f50ad32d10, type: 2}
   leaveMaterial: {fileID: 2100000, guid: 1af41386b6aebff43af8aff2e57927a8, type: 2}
