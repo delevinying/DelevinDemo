@@ -60,6 +60,7 @@
      <Compile Include="Assets\ECS\Noise.cs" />
      <Compile Include="Assets\ECS\PerlinNoiseGenerator.cs" />
      <Compile Include="Assets\ECS\Player.cs" />
+     <Compile Include="Assets\ECS\scenes\p1\Demo1.cs" />
      <Compile Include="Assets\ECS\SpawnNumberBlock.cs" />
      <Compile Include="Assets\ECS\SpawnOneBlock.cs" />
      <Compile Include="Assets\Managers.cs" />
