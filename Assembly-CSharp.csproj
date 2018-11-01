@@ -62,12 +62,13 @@
      <Compile Include="Assets\ECS\PerlinNoiseGenerator.cs" />
      <Compile Include="Assets\ECS\Player.cs" />
      <Compile Include="Assets\ECS\scenes\p1\Demo1.cs" />
-     <Compile Include="Assets\ECS\scenes\p3\Rotator.cs" />
-     <Compile Include="Assets\ECS\scenes\p3\RotatorSystem.cs" />
+     <Compile Include="Assets\ECS\scenes\p4\RotationSpeed.cs" />
+     <Compile Include="Assets\ECS\scenes\p4\RotationSpeedSystem.cs" />
      <Compile Include="Assets\ECS\SpawnNumberBlock.cs" />
      <Compile Include="Assets\ECS\SpawnOneBlock.cs" />
      <Compile Include="Assets\Managers.cs" />
      <Compile Include="Assets\PlanetSpawner.cs" />
+     <Compile Include="Assets\PlayerLogic.cs" />
      <Compile Include="Assets\SpData.cs" />
      <Compile Include="Assets\SpInstatiator.cs" />
      <None Include="Assets\read me.txt" />
