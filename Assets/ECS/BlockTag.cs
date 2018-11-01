@@ -15,3 +15,7 @@ public struct BlockTag : IComponentData {
 public struct SurfacePlantTag:IComponentData{
 
 }
+
+public struct DestoryTag:IComponentData{
+    
+}

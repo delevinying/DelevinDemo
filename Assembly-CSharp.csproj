@@ -62,6 +62,7 @@
      <Compile Include="Assets\ECS\PerlinNoiseGenerator.cs" />
      <Compile Include="Assets\ECS\Player.cs" />
      <Compile Include="Assets\ECS\scenes\p1\Demo1.cs" />
+     <Compile Include="Assets\ECS\scenes\p2\DestorySystem.cs" />
      <Compile Include="Assets\ECS\scenes\p4\RotationSpeed.cs" />
      <Compile Include="Assets\ECS\scenes\p4\RotationSpeedSystem.cs" />
      <Compile Include="Assets\ECS\SpawnNumberBlock.cs" />

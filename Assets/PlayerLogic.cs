@@ -109,6 +109,9 @@ public class PlayerLogic : MonoBehaviour
 		Physics.Raycast(transform.position,transform.forward,out hitInfo,7,blockLayer);
 		if(hitInfo.transform!=null){
 			// entityManager.get
+			Entity entity = entityManager.CreateEntity(GameSettings.BlockArchetype);
+			entityManager.SetComponentData(entity,new Position{Value = hitInfo.transform.position+hitInfo.normal});
+			entityManager.AddComponentData(entity,new DestoryTag{});
 		}
 	}
 }
