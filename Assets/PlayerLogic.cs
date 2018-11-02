@@ -112,6 +112,8 @@ public class PlayerLogic : MonoBehaviour
 			Entity entity = entityManager.CreateEntity(GameSettings.BlockArchetype);
 			entityManager.SetComponentData(entity,new Position{Value = hitInfo.transform.position+hitInfo.normal});
 			entityManager.AddComponentData(entity,new DestoryTag{});
+
+			Destroy(hitInfo.transform.gameObject);
 		}
 	}
 }

@@ -1,35 +1,45 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using Unity.Entities;
 using Unity.Burst;
 using Unity.Jobs;
 using Unity.Mathematics;
 using Unity.Transforms;
+using Unity.Collections;
 public class DestorySystem : ComponentSystem
 {
     struct BlockGroup
     {	
-		// [ReadOnly]
+		[ReadOnly]
         public readonly int length;
+		[ReadOnly]
         public EntityArray entityArray;
+		[ReadOnly]
         public ComponentDataArray<Position> positions;
+		[ReadOnly]
         public ComponentDataArray<BlockTag> tags;
     }
 
     struct DestoryBlockGroup
     {
-		// [ReadOnly]
+		[ReadOnly]
         public readonly int length;
+		[ReadOnly]
         public EntityArray entityArray;
+		[ReadOnly]
         public ComponentDataArray<Position> positions;
+		[ReadOnly]
         public ComponentDataArray<DestoryTag> tags;
     }
     struct SurfacePlantGroup
     {
+		[ReadOnly]
         public readonly int length;
+		[ReadOnly]
         public EntityArray entityArray;
+		[ReadOnly]
         public ComponentDataArray<Position> positions; 
+		[ReadOnly]
 		public ComponentDataArray<SurfacePlantTag> tags;
     }
 
@@ -44,7 +54,7 @@ public class DestorySystem : ComponentSystem
             {
                 Vector3 offset = targetBlocks.positions[j].Value - sourceBlocks.positions[i].Value;
                 float sqrLen = offset.sqrMagnitude;
-                if (sqrLen == 0)
+                if (sqrLen == 0)//选中方块
                 {
                     for (int k = 0; k < surfacePlants.length; k++)
                     {
