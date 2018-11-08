@@ -1,11 +1,6 @@
 {
-<<<<<<< HEAD
-	"process_id" : 26426,
-	"version" : "2018.2.11f1"
-=======
-	"process_id" : 2668,
-	"version" : "2018.3.0b2",
-	"app_path" : "/Applications/Unity/Hub/Editor/2018.3.0b2/Unity.app",
-	"app_contents_path" : "/Applications/Unity/Hub/Editor/2018.3.0b2/Unity.app/Contents"
->>>>>>> 274acad58f8d9807f989fe422c4b9a037b4e152a
+	"process_id" : 36070,
+	"version" : "2018.3.0b5",
+	"app_path" : "/Applications/Unity/Hub/Editor/2018.3.0b5/Unity.app",
+	"app_contents_path" : "/Applications/Unity/Hub/Editor/2018.3.0b5/Unity.app/Contents"
 }

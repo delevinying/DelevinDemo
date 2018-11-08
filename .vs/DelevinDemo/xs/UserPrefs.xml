@@ -1,11 +1,8 @@
-﻿<Properties>
+﻿<Properties StartupConfiguration="{2C255F6E-8EF6-DC7A-3BC0-C754304C73BB}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ECS/SpawnOneBlock.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PlayerLogic.cs">
     <Files>
-      <File FileName="Assets/ECS/GameSettings.cs" Line="150" Column="37" />
-      <File FileName="Assets/ECS/PerlinNoiseGenerator.cs" Line="23" Column="1" />
-      <File FileName="Assets/ECS/SpawnOneBlock.cs" Line="33" Column="51" />
-      <File FileName="Assets/ECS/BlockTag.cs" Line="10" Column="37" />
+      <File FileName="Assets/PlayerLogic.cs" Line="116" Column="13" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

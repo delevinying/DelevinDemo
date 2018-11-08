@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/ECS/scenes/p3/ecs3.unity
+- path: Assets/ECS/scenes/p2/ecs2.unity
   isLoaded: 1
   isActive: 1

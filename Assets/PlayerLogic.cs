@@ -32,6 +32,7 @@ public class PlayerLogic : MonoBehaviour
         player = this.transform.parent.gameObject;
         Cursor.lockState = CursorLockMode.Locked;
         entityManager = World.Active.GetOrCreateManager<EntityManager>();
+        // this.transform.position
     }
 
     // Update is called once per frame
@@ -90,7 +91,7 @@ public class PlayerLogic : MonoBehaviour
 
 	void placeBlock(Material material){
 		RaycastHit hitInfo;
-		Physics.Raycast(transform.position,transform.forward,out hitInfo,7,blockLayer);
+		Physics.Raycast(transform.position,transform.forward,out hitInfo,12,blockLayer);
 		if(hitInfo.transform!=null){
 			Entity entity = entityManager.CreateEntity(GameSettings.BlockArchetype);
 			entityManager.SetComponentData(entity,new Position{Value = hitInfo.transform.position+hitInfo.normal});
@@ -106,13 +107,15 @@ public class PlayerLogic : MonoBehaviour
 
 	void DestoryBlock(){
 		RaycastHit hitInfo;
-		Physics.Raycast(transform.position,transform.forward,out hitInfo,7,blockLayer);
+		Physics.Raycast(transform.position,transform.forward,out hitInfo,12,blockLayer);
+        //Debug.DrawRay(gameObject.transform.position,)
+        // Debug.Log("-------------------"+hitInfo.transform);
 		if(hitInfo.transform!=null){
 			// entityManager.get
 			Entity entity = entityManager.CreateEntity(GameSettings.BlockArchetype);
-			entityManager.SetComponentData(entity,new Position{Value = hitInfo.transform.position+hitInfo.normal});
+			entityManager.SetComponentData(entity,new Position{Value = hitInfo.transform.position});
 			entityManager.AddComponentData(entity,new DestoryTag{});
-
+            // Debug.Log("---------------Destory --- "+hitInfo.transform);
 			Destroy(hitInfo.transform.gameObject);
 		}
 	}

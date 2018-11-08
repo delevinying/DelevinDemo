@@ -1,11 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Unity.Rendering;
-using Unity.Entities;
-using Unity.Mathematics;
-using Unity.Transforms;
-public class Demo3 : MonoBehaviour {
+﻿// using System.Collections;
+// using System.Collections.Generic;
+// using UnityEngine;
+// using Unity.Rendering;
+// using Unity.Entities;
+// using Unity.Mathematics;
+// using Unity.Transforms;
+// public class Demo3 : MonoBehaviour {
 	// public static EntityArchetype entityArchetype;
 	// public EntityManager entityManager;
 	// public Mesh mesh;
@@ -42,4 +42,4 @@ public class Demo3 : MonoBehaviour {
 	// void Update () {
 		
 	// }
-}
+// }
