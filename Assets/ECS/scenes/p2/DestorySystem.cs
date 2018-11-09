@@ -44,23 +44,28 @@ public class DestorySystem : ComponentSystem {
     [Inject] DestoryBlockGroup sourceBlocks;
     [Inject] SurfacePlantGroup surfacePlants;
     protected override void OnUpdate () {
-        if (this.objTransForms == null) {
-            // this.transForms = GameObject.FindWithTag("Player").Transforms
-            GameObject obj = GameObject.FindWithTag("Player");
-            this.objTransForms = obj.transform;
-        }
-        this.objPosion = this.objTransForms.position;
+        // if (this.objTransForms == null) {
+        //     // this.transForms = GameObject.FindWithTag("Player").Transforms
+        //     GameObject obj = GameObject.FindWithTag("Player");
+        //     this.objTransForms = obj.transform;
+        // }
+        // this.objPosion = this.objTransForms.position;
         for (int n = 0; n < targetBlocks.Length; n++) {
-            Vector3 v3 = new Vector3(targetBlocks.positions[n].Value.x,targetBlocks.positions[n].Value.y,
-            targetBlocks.positions[n].Value.z);
-            Vector3 temp = this.objPosion - v3;
-            float sqrLen =  temp.magnitude;
-            //targetBlocks.positions[n].Value.x+targetBlocks.positions[n].Value.z;
-            //temp.sqrMagnitude;
-            if (sqrLen > 80) {
+            float x = targetBlocks.positions[n].Value.x;
+            if(x > 10){
                 PostUpdateCommands.DestroyEntity (targetBlocks.entityArray[n]);
                 Debug.Log ("销毁 --------  " + n);
             }
+            // Vector3 v3 = new Vector3(targetBlocks.positions[n].Value.x,targetBlocks.positions[n].Value.y,
+            // targetBlocks.positions[n].Value.z);
+            // Vector3 temp = this.objPosion - v3;
+            // float sqrLen =  temp.magnitude;
+            // //targetBlocks.positions[n].Value.x+targetBlocks.positions[n].Value.z;
+            // //temp.sqrMagnitude;
+            // if (sqrLen > 80) {
+            //     PostUpdateCommands.DestroyEntity (targetBlocks.entityArray[n]);
+            //     Debug.Log ("销毁 --------  " + n);
+            // }
         }
 
         // Debug.Log("  OnUpdate   OnUpdate  OnUpdate  sourceBlocks.Length  "+sourceBlocks.Length+"    targetBlocks.Length  "+targetBlocks.Length);
