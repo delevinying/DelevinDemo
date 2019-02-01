@@ -110,13 +110,13 @@ public class GameSettings : MonoBehaviour
                             }
                             else
                             {
-                              //  TreeGenerator(xBlock, yBlock, zBlock);
+                                TreeGenerator(xBlock, yBlock, zBlock);
                             }
                             airChecker = true;
                             break;
                         case 1:
-                            // meshTemp = surfaceMesh;
-                            // maTemp = surfaceMaterial;
+                             //meshTemp = surfaceMesh;
+                             //maTemp = surfaceMaterial;
                             break;
                         case 2:
                         case 3:

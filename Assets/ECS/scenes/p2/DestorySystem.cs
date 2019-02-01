@@ -50,12 +50,12 @@ public class DestorySystem : ComponentSystem {
         //     this.objTransForms = obj.transform;
         // }
         // this.objPosion = this.objTransForms.position;
-        for (int n = 0; n < targetBlocks.Length; n++) {
-            float x = targetBlocks.positions[n].Value.x;
-            if(x > 10){
-                PostUpdateCommands.DestroyEntity (targetBlocks.entityArray[n]);
-                Debug.Log ("销毁 --------  " + n);
-            }
+        //for (int n = 0; n < targetBlocks.Length; n++) {
+            //float x = targetBlocks.positions[n].Value.x;
+            //if(x > 10){
+            //    PostUpdateCommands.DestroyEntity (targetBlocks.entityArray[n]);
+            //    Debug.Log ("销毁 --------  " + n);
+            //}
             // Vector3 v3 = new Vector3(targetBlocks.positions[n].Value.x,targetBlocks.positions[n].Value.y,
             // targetBlocks.positions[n].Value.z);
             // Vector3 temp = this.objPosion - v3;
@@ -66,7 +66,7 @@ public class DestorySystem : ComponentSystem {
             //     PostUpdateCommands.DestroyEntity (targetBlocks.entityArray[n]);
             //     Debug.Log ("销毁 --------  " + n);
             // }
-        }
+        //}
 
         // Debug.Log("  OnUpdate   OnUpdate  OnUpdate  sourceBlocks.Length  "+sourceBlocks.Length+"    targetBlocks.Length  "+targetBlocks.Length);
         for (int i = 0; i < sourceBlocks.Length; i++) {
